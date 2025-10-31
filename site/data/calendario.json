@@ -1,0 +1,12 @@
+{
+  "eventos": [
+    {"fecha": "22/07/25", "descripcion": "2do Semestre - 1ra vuelta inscripciones"},
+    {"fecha": "07/08/25", "descripcion": "2do Semestre - 2da vuelta inscripciones"},
+    {"fecha": "11/08/25", "descripcion": "Inicio de clases 2do semestre"},
+    {"fecha": "06/10/25", "descripcion": "Inscripcion Finales Octubre"},
+    {"fecha": "20/10/25", "descripcion": "Finales Octubre - Unico Llamado"},
+    {"fecha": "09/12/25", "descripcion": "Inscripcion Finales Diciembre"},
+    {"fecha": "15/12/25", "descripcion": "Finales Diciembre - 1er Llamado"},
+    {"fecha": "22/12/25", "descripcion": "Finales Diciembre - 2do Llamado"}
+  ]
+}

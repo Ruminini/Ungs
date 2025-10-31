@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UNGS Portal</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <h1>UNGS Portal</h1>
+    <nav>
+      <button onclick="scrollToSection('calendario')">Calendario</button>
+      <button onclick="scrollToSection('materias')">Materias</button>
+      <button onclick="scrollToSection('faq')">FAQ</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="calendario">
+      <h2>📅 Calendario Académico</h2>
+      <div class="content" id="calendario-content">Cargando...</div>
+    </section>
+
+    <section id="materias">
+      <h2>📘 Materias</h2>
+      <div class="content" id="materias-content">Cargando...</div>
+    </section>
+
+    <section id="faq">
+      <h2>💡 FAQ</h2>
+      <div class="content" id="faq-content">Cargando...</div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Hecho por Tobias Rumiz — © 2025</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

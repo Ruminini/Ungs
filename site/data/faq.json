@@ -1,0 +1,9 @@
+{
+  "preguntas": [
+    {"pregunta": "¿Cómo me inscribo a una materia?", "respuesta": "Debes ingresar al SIU Guaraní con tu usuario y contraseña, luego seleccionar las materias disponibles para inscribirte."},
+    {"pregunta": "¿Dónde puedo ver mi horario de clases?", "respuesta": "Tu horario de clases se encuentra en el mismo SIU Guaraní, en la sección de 'Horarios'."},
+    {"pregunta": "¿Cómo solicito un certificado de alumno regular?", "respuesta": "Puedes solicitar el certificado a través del portal del estudiante en el SIU Guaraní o en la oficina de administración."},
+    {"pregunta": "¿Qué hago si olvido mi contraseña?", "respuesta": "Utiliza la opción de 'Recuperar contraseña' en la página de inicio de sesión del SIU Guaraní."},
+    {"pregunta": "¿Dónde encuentro los materiales de estudio?", "respuesta": "Los materiales de estudio suelen estar disponibles en la plataforma virtual de la universidad o pueden ser proporcionados por los docentes."}
+  ]
+}
