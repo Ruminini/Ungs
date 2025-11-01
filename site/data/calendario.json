@@ -1,12 +1,27 @@
 {
   "eventos": [
-    {"fecha": "22/07/25", "descripcion": "2do Semestre - 1ra vuelta inscripciones"},
-    {"fecha": "07/08/25", "descripcion": "2do Semestre - 2da vuelta inscripciones"},
-    {"fecha": "11/08/25", "descripcion": "Inicio de clases 2do semestre"},
-    {"fecha": "06/10/25", "descripcion": "Inscripcion Finales Octubre"},
-    {"fecha": "20/10/25", "descripcion": "Finales Octubre - Unico Llamado"},
-    {"fecha": "09/12/25", "descripcion": "Inscripcion Finales Diciembre"},
-    {"fecha": "15/12/25", "descripcion": "Finales Diciembre - 1er Llamado"},
-    {"fecha": "22/12/25", "descripcion": "Finales Diciembre - 2do Llamado"}
+    {"fecha": "09/12/2024", "fechaFin": "14/12/2024", "descripcion": "Inscripción Cursada de Verano Complementario 2024"},
+    {"fecha": "13/01/2025", "fechaFin": "18/01/2025", "descripcion": "Cambios o Bajas de Carrera - Previo a inscripción 1er semestre"},
+    {"fecha": "13/02/2025", "fechaFin": "17/02/2025", "descripcion": "1ra Vuelta de Inscripción Estudiantes Cursantes"},
+    {"fecha": "03/03/2025", "fechaFin": "05/03/2025", "descripcion": "2da Vuelta de Inscripción Estudiantes Cursantes no asignados por capacidad"},
+    {"fecha": "10/03/2025", "fechaFin": "28/06/2025", "descripcion": "Cursada Primer Semestre (Talleres Iniciales, Asignaturas Semestrales 1/2025 y Anuales)"},
+    {"fecha": "05/05/2025", "fechaFin": "07/05/2025", "descripcion": "Inscripción Finales Mayo"},
+    {"fecha": "19/05/2025", "fechaFin": "24/05/2025", "descripcion": "Finales Mayo - Único Llamado"},
+    {"fecha": "17/06/2025", "fechaFin": "20/06/2025", "descripcion": "Inscripción Intensivo de Invierno CI/2025"},
+    {"fecha": "30/06/2025", "fechaFin": "02/08/2025", "descripcion": "Cursada Intensivo de Invierno CI/2025"},
+    {"fecha": "23/06/2025", "fechaFin": "28/06/2025", "descripcion": "Cambios o Bajas de Carrera - Previo a inscripción 2do semestre"},
+    {"fecha": "14/07/2025", "fechaFin": "19/07/2025", "descripcion": "Finales Julio - 1er Llamado"},
+    {"fecha": "21/07/2025", "fechaFin": "26/07/2025", "descripcion": "Finales Julio - 2do Llamado"},
+    {"fecha": "22/07/2025", "fechaFin": "25/07/2025", "descripcion": "1ra Vuelta de Inscripción Estudiantes Ingresantes y Cursantes"},
+    {"fecha": "05/08/2025", "fechaFin": "07/08/2025", "descripcion": "2da Vuelta de Inscripción Estudiantes Ingresantes y Cursantes no asignados por capacidad"},
+    {"fecha": "11/08/2025", "fechaFin": "29/11/2025", "descripcion": "Cursada Segundo Semestre (Talleres Iniciales y Asignaturas Semestrales 2/2025)"},
+    {"fecha": "06/10/2025", "fechaFin": "08/10/2025", "descripcion": "Inscripción Finales Octubre"},
+    {"fecha": "20/10/2025", "fechaFin": "25/10/2025", "descripcion": "Finales Octubre - Único Llamado"},
+    {"fecha": "09/12/2025", "fechaFin": "11/12/2025", "descripcion": "Inscripción Finales Diciembre"},
+    {"fecha": "15/12/2025", "fechaFin": "20/12/2025", "descripcion": "Finales Diciembre - 1er Llamado"},
+    {"fecha": "22/12/2025", "fechaFin": "27/12/2025", "descripcion": "Finales Diciembre - 2do Llamado"},
+    {"fecha": "04/11/2024", "fechaFin": "08/12/2024", "descripcion": "Matriculación de Ingresantes 1/2025"},
+    {"fecha": "02/06/2025", "fechaFin": "09/06/2025", "descripcion": "Matriculación de Ingresantes 2/2025"},
+    {"fecha": "03/11/2025", "fechaFin": "29/11/2025", "descripcion": "Matriculación de Ingresantes 2026"}
   ]
 }
