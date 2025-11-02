@@ -1,11 +1,38 @@
+let allMaterias = null;
+
 async function loadData() {
 	const calendario = await fetch("data/calendario.json").then((r) => r.json());
 	const comisiones = await fetch("data/comisiones.json").then((r) => r.json());
 	const faq = await fetch("data/faq.json").then((r) => r.json());
 
 	renderCalendario(calendario);
-	renderComisiones(comisiones);
+	allMaterias = comisionesToMaterias(comisiones);
+	renderComisiones(allMaterias);
 	renderFAQ(faq);
+
+	const searchInput = document.getElementById("search-input");
+	searchInput.addEventListener(
+		"input",
+		debounce((e) => {
+			filterComisiones(e.target.value);
+		}, 300)
+	);
+}
+
+function debounce(func, wait) {
+	let timeout;
+	return function executedFunction(...args) {
+		const later = () => {
+			clearTimeout(timeout);
+			func(...args);
+		};
+		clearTimeout(timeout);
+		timeout = setTimeout(later, wait);
+	};
+}
+
+function strToId(str) {
+	return str.replace(/\s+/g, "-").toLowerCase();
 }
 
 function renderCalendario(data) {
@@ -61,22 +88,42 @@ function renderCalendario(data) {
 	});
 }
 
-function renderComisiones(data) {
-	const div = document.getElementById("comisiones-content");
-	div.innerHTML = "";
-
-	// Agrupar comisiones por Actividad
+function comisionesToMaterias(data) {
 	const materias = {};
 	Object.entries(data).forEach(([num, c]) => {
 		const act = c.Actividad;
 		if (!materias[act]) materias[act] = [];
-		materias[act].push({ num, ...c });
+		const id = strToId(num);
+		const com = num.replace(/^A\d{4}/, "").trim();
+		materias[act].push({ com, id, ...c });
 	});
+	const ordered = Object.keys(materias)
+		.sort()
+		.reduce((obj, key) => {
+			obj[key] = materias[key];
+			return obj;
+		}, {});
+	Object.entries(ordered).forEach(([actividad, comisiones]) => {
+		comisiones.forEach((c) => {
+			const termino = [actividad, c.com, (c.Docentes || []).join(" ")]
+				.join(" ")
+				.normalize("NFD")
+				.replace(/[\u0300-\u036f]/g, "")
+				.toLocaleLowerCase();
+			c.termino = termino;
+		});
+	});
+	return ordered;
+}
 
-	// Renderizar cada materia (actividad)
+function renderComisiones(materias) {
+	const div = document.getElementById("comisiones-content");
+
 	Object.entries(materias).forEach(([actividad, comisiones]) => {
 		const card = document.createElement("div");
-		card.className = "card";
+		card.className = "card materia";
+		card.id = strToId(actividad);
+		card.style.display = "none";
 
 		let html = `<h3>${actividad}</h3>`;
 
@@ -99,11 +146,10 @@ function renderComisiones(data) {
 			}
 			horariosTable += `</table>`;
 
-			// Subinfo + tabla
 			html += `
-        <div class="subcard">
+        <div class="subcard comision" id="${c.id}">
           <p class="subinfo">
-            <b>${c.num}</b> — ${docentes}<br>
+            <b>${c.com}</b> — ${docentes}<br>
           </p>
           <div class="tabla-horarios">
             ${horariosTable}
@@ -130,6 +176,48 @@ function renderFAQ(data) {
 
 function scrollToSection(id) {
 	document.getElementById(id).scrollIntoView({ behavior: "smooth" });
+}
+
+function filterComisiones(term) {
+	if (!term.trim()) {
+		document.getElementById("no-results").style.display = "none";
+		document.querySelectorAll(".materia, .comision").forEach((el) => {
+			el.style.display = "";
+		});
+		return;
+	}
+
+	const normalizedTerm = term
+		.normalize("NFD")
+		.replace(/[\u0300-\u036f]/g, "")
+		.toLowerCase();
+
+	const tokens = normalizedTerm.split(/\s+/).filter((t) => t.length > 0);
+	let anyVisible = false;
+	Object.entries(allMaterias).forEach(([actividad, comisiones]) => {
+		const actividadId = strToId(actividad);
+		const materiaElement = document.getElementById(actividadId);
+		let hasVisibleComisiones = false;
+
+		comisiones.forEach((c) => {
+			const comisionElement = document.getElementById(c.id);
+			const matches = tokens.every((token) => c.termino.includes(token));
+
+			if (matches) {
+				comisionElement.style.display = "";
+				hasVisibleComisiones = true;
+				anyVisible = true;
+			} else {
+				comisionElement.style.display = "none";
+			}
+		});
+
+		materiaElement.style.display = hasVisibleComisiones ? "" : "none";
+	});
+	const noResults = document.getElementById("no-results");
+	noResults.textContent = "No se encontraron resultados";
+	noResults.style.display = anyVisible ? "none" : "";
+	console.log(anyVisible);
 }
 
 window.onload = loadData;

@@ -194,3 +194,37 @@ footer {
 .subcard:last-child {
 	margin-bottom: 0;
 }
+
+.search-bar {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 1rem;
+}
+
+#search-input {
+	width: 100%;
+	max-width: 500px;
+	background: #1e1e1e;
+	color: var(--text);
+	border: 1px solid #333;
+	border-radius: 8px;
+	padding: 0.6rem 1rem;
+	font-size: 1rem;
+	transition: border 0.2s, box-shadow 0.2s;
+}
+
+#search-input:focus {
+	outline: none;
+	border-color: var(--accent);
+	box-shadow: 0 0 5px var(--accent);
+}
+
+#no-results {
+	text-align: center;
+	color: #888;
+	font-size: 1.2rem;
+}
+
+.hidden {
+	display: none !important;
+}
