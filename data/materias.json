@@ -1,7 +1,0 @@
-{
-  "materias": [
-    {"nombre": "Sistemas Operativos", "comision": "01","turno": "Mañana", "horario": "Lunes y Miércoles 08-12hs"},
-    {"nombre": "Base de Datos", "comision": "02","turno": "Tarde", "horario": "Martes y Jueves 14-18hs"},
-    {"nombre": "Proyecto Profesional II", "comision": "01","turno": "Noche", "horario": "Lunes y Miércoles 18-22hs"}
-  ]
-}

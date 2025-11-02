@@ -1,4 +1,4 @@
-# 🎓 Dashboard Facultad
+# 🎓 UNGS Portal
 
 Un sitio web estático minimalista (modo oscuro) para acceder fácilmente a información de la facultad: calendario académico, materias y preguntas frecuentes.
 Hecho con **HTML, CSS y JavaScript**, y hosteado en **GitHub Pages**.
