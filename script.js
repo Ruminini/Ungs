@@ -1,10 +1,10 @@
 async function loadData() {
 	const calendario = await fetch("data/calendario.json").then((r) => r.json());
-	const materias = await fetch("data/materias.json").then((r) => r.json());
+	const comisiones = await fetch("data/comisiones.json").then((r) => r.json());
 	const faq = await fetch("data/faq.json").then((r) => r.json());
 
 	renderCalendario(calendario);
-	renderMaterias(materias);
+	renderComisiones(comisiones);
 	renderFAQ(faq);
 }
 
@@ -61,16 +61,58 @@ function renderCalendario(data) {
 	});
 }
 
-function renderMaterias(data) {
-	const div = document.getElementById("materias-content");
+function renderComisiones(data) {
+	const div = document.getElementById("comisiones-content");
 	div.innerHTML = "";
-	data.materias.forEach((m) => {
+
+	// Agrupar comisiones por Actividad
+	const materias = {};
+	Object.entries(data).forEach(([num, c]) => {
+		const act = c.Actividad;
+		if (!materias[act]) materias[act] = [];
+		materias[act].push({ num, ...c });
+	});
+
+	// Renderizar cada materia (actividad)
+	Object.entries(materias).forEach(([actividad, comisiones]) => {
 		const card = document.createElement("div");
 		card.className = "card";
-		card.innerHTML = `<h3>${m.nombre}</h3>
-      <p><b>Comision:</b> ${m.comision}</p>
-      <p><b>Turno:</b> ${m.turno}</p>
-      <p><b>Horario:</b> ${m.horario}</p>`;
+
+		let html = `<h3>${actividad}</h3>`;
+
+		comisiones.forEach((c) => {
+			const docentes = c.Docentes.join(", ");
+
+			let horariosTable = `
+        <table class="mini-table">
+          <tr><th>Día</th><th>Horario</th><th>Aula</th><th>Tipo</th></tr>
+      `;
+			for (let i = 0; i < c.Dia.length; i++) {
+				horariosTable += `
+          <tr>
+            <td>${c.Dia[i]}</td>
+            <td>${c.Horario[i]}</td>
+            <td>${c.Aula[i]}</td>
+            <td>${c.Tipo[i]}</td>
+          </tr>
+        `;
+			}
+			horariosTable += `</table>`;
+
+			// Subinfo + tabla
+			html += `
+        <div class="subcard">
+          <p class="subinfo">
+            <b>${c.num}</b> — ${docentes}<br>
+          </p>
+          <div class="tabla-horarios">
+            ${horariosTable}
+          </div>
+        </div>
+      `;
+		});
+
+		card.innerHTML = html;
 		div.appendChild(card);
 	});
 }

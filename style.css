@@ -128,3 +128,69 @@ footer {
 		background: white;
 	}
 }
+
+.card h3 {
+	margin: 0 0 0.3rem 0;
+	color: var(--accent);
+	font-size: 1.2rem;
+}
+
+.subinfo {
+	margin: 0 0 0.6rem 0;
+	color: #aaa;
+	/* font-size: 0.9rem; */
+}
+
+.mini-table {
+	width: 100%;
+	border-collapse: separate;
+	border-spacing: 0.5rem 0; /* 👈 gap entre columnas */
+	font-size: 0.8rem;
+}
+
+.mini-table th {
+	text-align: left;
+	font-weight: 600;
+	color: #ccc;
+	border-bottom: 1px solid #333;
+	padding-bottom: 0.2rem;
+}
+
+.mini-table tr {
+	padding-bottom: 0.25rem;
+}
+
+.mini-table td {
+	padding: 0.3rem 0;
+	/* border-bottom: 1px solid #222; */
+	color: #ddd;
+}
+
+.mini-table tr:last-child td {
+	border-bottom: none;
+	padding-bottom: 0;
+}
+
+.mini-table td:nth-child(1) {
+	width: 20%;
+}
+.mini-table td:nth-child(2) {
+	width: 30%;
+}
+.mini-table td:nth-child(3) {
+	width: 30%;
+}
+.mini-table td:nth-child(4) {
+	width: 20%;
+}
+
+.subcard {
+	background: #242424;
+	border-radius: 6px;
+	padding: 0.6rem;
+	margin-bottom: 0.7rem;
+}
+
+.subcard:last-child {
+	margin-bottom: 0;
+}
