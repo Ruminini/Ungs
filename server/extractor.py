@@ -12,7 +12,8 @@ df['Fin'] = pd.to_datetime(df['Fin'], format='%Y-%m-%d')
 for col in df.columns:
   df[col] = df[col].astype(str)
   df[col] = df[col].str.replace('\n', ' ').str.strip()
-
+dias= ['Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado', 'Domingo']
+df['Dia'] = pd.Categorical(df['Dia'], categories=dias, ordered=True)
 df = df.sort_values(by=['Actividad', 'Dia', 'Horario'])
 
 data = df.groupby('Comision').agg({
