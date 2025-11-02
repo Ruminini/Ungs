@@ -70,11 +70,11 @@ function renderCalendario(data) {
 		? calendarioData
 				.map(
 					(e) =>
-						`<div class="card ${e.activo ? "active" : ""} ${
-							e.date < hoy && !e.activo ? "old" : ""
+						`<li class="card ${e.activo ? "active" : ""} ${
+							e.date < hoy && !e.activo ? 'old" aria-disabled="true"' : ""
 						}">${e.fecha.slice(0, -5)}${
 							e.fechaFin ? " - " + e.fechaFin.slice(0, -5) : ""
-						} — <b>${e.descripcion}</b></div>`
+						} — <b>${e.descripcion}</b></li>`
 				)
 				.join("")
 		: "<p>No hay eventos activos.</p>";
@@ -217,7 +217,6 @@ function filterComisiones(term) {
 	const noResults = document.getElementById("no-results");
 	noResults.textContent = "No se encontraron resultados";
 	noResults.style.display = anyVisible ? "none" : "";
-	console.log(anyVisible);
 }
 
 window.onload = loadData;
