@@ -78,12 +78,29 @@ function renderCalendario(data) {
 				)
 				.join("")
 		: "<p>No hay eventos activos.</p>";
+	resetCalendar();
+}
 
+function resetCalendar() {
+	const proximosEventos = document.getElementById("proximos-eventos");
 	const events = proximosEventos.getElementsByClassName("card");
 	let nextEvent = proximosEventos.querySelector(".card:not(.old)");
 	nextEvent = nextEvent ? nextEvent : events[events.length - 1];
-	proximosEventos.scrollBy({
-		top: nextEvent.offsetTop - proximosEventos.offsetTop,
+	// if current scroll is already at nextEvent, scroll slightly up to trigger smooth scroll
+	const nextScrollTop = nextEvent.offsetTop - proximosEventos.offsetTop;
+	if (
+		proximosEventos.scrollTop >= nextScrollTop &&
+		proximosEventos.scrollTop <= nextScrollTop + nextEvent.offsetHeight
+	) {
+		proximosEventos.scrollTo({
+			top: nextScrollTop - 50,
+			behavior: "smooth",
+		});
+		setTimeout(resetCalendar, 75);
+		return;
+	}
+	proximosEventos.scrollTo({
+		top: nextScrollTop,
 		behavior: "smooth",
 	});
 }
@@ -175,16 +192,39 @@ function renderFAQ(data) {
 }
 
 function scrollToSection(id) {
-	document.getElementById(id).scrollIntoView({ behavior: "smooth" });
+	const section = document.getElementById(id);
+	const distance = section.offsetTop;
+	const header = document.querySelector("header");
+	const offsetTop = document.querySelector("header").offsetHeight;
+	const isSticky = window.getComputedStyle(header).position === "sticky";
+	window.scrollTo({
+		top: distance - isSticky * offsetTop,
+		behavior: "smooth",
+	});
 }
 
+const scrollToTopButton = document.getElementById("scroll-to-top");
+
+window.addEventListener("scroll", () => {
+	if (window.scrollY > 100) {
+		scrollToTopButton.classList.add("visible");
+	} else {
+		scrollToTopButton.classList.remove("visible");
+	}
+});
+
 function filterComisiones(term) {
+	const noResults = document.getElementById("no-results");
+	const noSearch = document.getElementById("no-search");
 	if (!term.trim()) {
-		document.getElementById("no-results").style.display = "none";
+		noSearch.style.display = "";
+		noResults.style.display = "none";
 		document.querySelectorAll(".materia, .comision").forEach((el) => {
-			el.style.display = "";
+			el.style.display = "none";
 		});
 		return;
+	} else {
+		noSearch.style.display = "none";
 	}
 
 	const normalizedTerm = term
@@ -214,8 +254,6 @@ function filterComisiones(term) {
 
 		materiaElement.style.display = hasVisibleComisiones ? "" : "none";
 	});
-	const noResults = document.getElementById("no-results");
-	noResults.textContent = "No se encontraron resultados";
 	noResults.style.display = anyVisible ? "none" : "";
 }
 
