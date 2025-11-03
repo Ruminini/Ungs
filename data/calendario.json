@@ -22,6 +22,54 @@
     {"fecha": "22/12/2025", "fechaFin": "27/12/2025", "descripcion": "Finales Diciembre - 2do Llamado"},
     {"fecha": "04/11/2024", "fechaFin": "08/12/2024", "descripcion": "Matriculación de Ingresantes 1/2025"},
     {"fecha": "02/06/2025", "fechaFin": "09/06/2025", "descripcion": "Matriculación de Ingresantes 2/2025"},
-    {"fecha": "03/11/2025", "fechaFin": "29/11/2025", "descripcion": "Matriculación de Ingresantes 2026"}
+    {"fecha": "03/11/2025", "fechaFin": "29/11/2025", "descripcion": "Matriculación de Ingresantes 2026"},
+    
+    {"fecha": "02/06/2026", "fechaFin": "09/06/2026", "descripcion": "Matriculación de Ingresantes 2/2026"},
+    {"fecha": "04/11/2026", "fechaFin": "30/11/2026", "descripcion": "Matriculación de Ingresantes 2027"},
+    
+    {"fecha": "10/12/2025", "fechaFin": "13/12/2025", "descripcion": "Inscripción Cursada Intensiva de Verano - Estudiantes Cursantes"},
+    {"fecha": "12/01/2026", "fechaFin": "21/02/2026", "descripcion": "Cursada Intensiva de Verano (Complementario/2025)"},
+    {"fecha": "19/02/2026", "fechaFin": "24/02/2026", "descripcion": "Cierre de Actas - Cursada Intensiva de Verano"},
+    
+    {"fecha": "09/02/2026", "fechaFin": "12/02/2026", "descripcion": "1ra Vuelta de Inscripción - Estudiantes Cursantes (Anual y 1er Semestre)"},
+    {"fecha": "26/02/2026", "fechaFin": "28/02/2026", "descripcion": "2da Vuelta de Inscripción - Estudiantes Cursantes no asignados por capacidad"},
+    {"fecha": "09/03/2026", "fechaFin": "28/11/2026", "descripcion": "Cursada Anual 2026"},
+    {"fecha": "24/11/2026", "fechaFin": "02/12/2026", "descripcion": "Cierre Actas Regularidad - Cursada Anual"},
+    
+    {"fecha": "09/03/2026", "fechaFin": "27/06/2026", "descripcion": "Cursada Primer Semestre (Talleres Iniciales, Asignaturas Semestrales 1/2026 y Anuales)"},
+    {"fecha": "22/06/2026", "fechaFin": "05/07/2026", "descripcion": "Cierre de Actas - Primer Semestre"},
+    
+    {"fecha": "17/06/2026", "fechaFin": "19/06/2026", "descripcion": "Inscripción Intensivo de Invierno CI/2026"},
+    {"fecha": "29/06/2026", "fechaFin": "01/08/2026", "descripcion": "Cursada Intensivo de Invierno CI/2026"},
+    {"fecha": "28/07/2026", "fechaFin": "04/08/2026", "descripcion": "Cierre de Actas - Intensivo de Invierno"},
+    
+    {"fecha": "21/07/2026", "fechaFin": "24/07/2026", "descripcion": "1ra Vuelta de Inscripción - Estudiantes Ingresantes y Cursantes (2do Semestre)"},
+    {"fecha": "04/08/2026", "fechaFin": "06/08/2026", "descripcion": "2da Vuelta de Inscripción - Estudiantes Ingresantes y Cursantes no asignados por capacidad"},
+    {"fecha": "10/08/2026", "fechaFin": "28/11/2026", "descripcion": "Cursada Segundo Semestre (Talleres Iniciales y Asignaturas Semestrales 2/2026)"},
+    {"fecha": "24/11/2026", "fechaFin": "02/12/2026", "descripcion": "Cierre de Actas - Segundo Semestre"},
+    
+    {"fecha": "04/02/2026", "fechaFin": "06/02/2026", "descripcion": "Inscripción Finales Febrero"},
+    {"fecha": "18/02/2026", "fechaFin": "21/02/2026", "descripcion": "Finales Febrero - 1er Llamado"},
+    {"fecha": "23/02/2026", "fechaFin": "28/02/2026", "descripcion": "Finales Febrero - 2do Llamado"},
+    
+    {"fecha": "04/05/2026", "fechaFin": "06/05/2026", "descripcion": "Inscripción Finales Mayo"},
+    {"fecha": "18/05/2026", "fechaFin": "23/05/2026", "descripcion": "Finales Mayo - Único Llamado"},
+    
+    {"fecha": "06/07/2026", "fechaFin": "08/07/2026", "descripcion": "Inscripción Finales Julio"},
+    {"fecha": "13/07/2026", "fechaFin": "18/07/2026", "descripcion": "Finales Julio - 1er Llamado"},
+    {"fecha": "20/07/2026", "fechaFin": "25/07/2026", "descripcion": "Finales Julio - 2do Llamado"},
+    
+    {"fecha": "05/10/2026", "fechaFin": "07/10/2026", "descripcion": "Inscripción Finales Octubre"},
+    {"fecha": "19/10/2026", "fechaFin": "24/10/2026", "descripcion": "Finales Octubre - Único Llamado"},
+    
+    {"fecha": "09/12/2026", "fechaFin": "11/12/2026", "descripcion": "Inscripción Finales Diciembre"},
+    {"fecha": "14/12/2026", "fechaFin": "19/12/2026", "descripcion": "Finales Diciembre - 1er Llamado"},
+    {"fecha": "21/12/2026", "fechaFin": "26/12/2026", "descripcion": "Finales Diciembre - 2do Llamado"},
+    
+    {"fecha": "12/01/2026", "fechaFin": "17/01/2026", "descripcion": "Cambios o Bajas de Carrera - Previo a inscripción 1er semestre"},
+    {"fecha": "22/06/2026", "fechaFin": "27/06/2026", "descripcion": "Cambios o Bajas de Carrera - Previo a inscripción 2do semestre"},
+    
+    {"fecha": "29/06/2026", "fechaFin": "12/07/2026", "descripcion": "Receso Invernal - Estudiantes"},
+    {"fecha": "21/09/2026", "fechaFin": "21/09/2026", "descripcion": "Día del Estudiante - Asueto estudiantil"}
   ]
 }
