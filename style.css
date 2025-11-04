@@ -309,3 +309,40 @@ h2 {
 		right: 1rem;
 	}
 }
+
+.faq {
+	cursor: pointer;
+	padding: 0.8rem 1rem;
+	transition: background 0.2s;
+	box-sizing: border-box;
+	p {
+		margin: 0;
+		text-align: justify;
+	}
+}
+
+.faq:hover {
+	background: var(--card2);
+}
+
+.pregunta-container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 0.5rem;
+}
+
+.arrow {
+	width: 1.2rem;
+	height: 1.2rem;
+	transition: transform 0.25s ease;
+	flex-shrink: 0;
+}
+.respuesta-container {
+	transition: max-height 0.25s ease;
+}
+.respuesta {
+	color: var(--text);
+	padding-top: 0.5rem;
+	line-height: 1.4;
+}

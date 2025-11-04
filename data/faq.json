@@ -1,9 +1,44 @@
 {
-  "preguntas": [
-    {"pregunta": "¿Cómo me inscribo a una materia?", "respuesta": "Debes ingresar al SIU Guaraní con tu usuario y contraseña, luego seleccionar las materias disponibles para inscribirte."},
-    {"pregunta": "¿Dónde puedo ver mi horario de clases?", "respuesta": "Tu horario de clases se encuentra en el mismo SIU Guaraní, en la sección de 'Horarios'."},
-    {"pregunta": "¿Cómo solicito un certificado de alumno regular?", "respuesta": "Puedes solicitar el certificado a través del portal del estudiante en el SIU Guaraní o en la oficina de administración."},
-    {"pregunta": "¿Qué hago si olvido mi contraseña?", "respuesta": "Utiliza la opción de 'Recuperar contraseña' en la página de inicio de sesión del SIU Guaraní."},
-    {"pregunta": "¿Dónde encuentro los materiales de estudio?", "respuesta": "Los materiales de estudio suelen estar disponibles en la plataforma virtual de la universidad o pueden ser proporcionados por los docentes."}
+  "preguntas":[
+    {
+      "pregunta":"¿A cuántas materias me puedo inscribir por semestre?",
+      "respuesta":"Hay un límite de 4 materias por semestre, pero no es tan simple. Para cada semestre hay 2 vueltas de inscripciones: en la primera te podés inscribir en hasta 2 materias, y en la segunda hasta 4 TOTALES. Desde que abren las inscripciones hasta la primera semana de cursada, puede suceder que te den de baja de alguna materia."
+    },
+    {
+      "pregunta":"¿Qué pasa si no me pude inscribir por falta de cupo o me dieron de baja de una materia?",
+      "respuesta":"Por alguna razón, esto sucede. Lo que podés hacer es inscribirte en el formulario de lista de espera y recomendaría asistir a clase para charlarlo con el profe. Algunos se copan y te dejan entrar si hay lugar, pero otros no lo hacen y tu única salvación es quedar por lista de espera. Cuando se active el formulario, va a figurar en UngsActiva > Moodle > Links."
+    },
+    {
+      "pregunta":"Para un trámite/trabajo me piden una constancia. ¿De dónde la saco?",
+      "respuesta":"Todas las constancias las tramitás desde el Siu-Guaraní. Una vez iniciás sesión, vas a Trámites > Solicitar constancias y certificados. Ahí podrás elegir el tipo. La de Alumno Regular solo tenés que poner para quién es y generarla. Las otras (Evaluación Parcial y Examen Final) lo más rápido es seleccionar el año y buscar por fecha la que necesitás. Muchas veces los profes no cargan los parciales al SIU, por lo que si necesitás la constancia de 'Evaluación Parcial', preguntale a tu profe al entregar el parcial si puede hacerlo y para cuándo estará."
+    },
+    {
+      "pregunta":"Ya sé bastante inglés, ¿tengo que cursar todas las materias igual?",
+      "respuesta":"¡NO! Si diste algún examen internacional que lo valide, subí tu certificado al formulario de 'Solicitud de Acreditación de Lengua Inglesa' en UngsActiva > Moodle > Links. Si no diste, es muy viejo o no está dentro de los que la UNGS acepta, existe el 'Examen Inglés Acreditación'. El formulario para dar este examen también está en los links de Activa y se habilita en las fechas de inscripción a exámenes finales. En base a cómo te fue, puede que te den todos, alguno o ninguno de los niveles como equivalencia, y podés cursar los restantes o darlos libre en otra fecha de final. En el Moodle hay aulas virtuales sin profes para practicar tu inglés si lo necesitás."
+    },
+    {
+      "pregunta":"¿Qué pasa si no me presento a un final?",
+      "respuesta":"Nada. Si no te presentás, en el SIU te va a figurar como ausente, pero no debería afectarte."
+    },
+    {
+      "pregunta":"¿Cuántas veces puedo dar un final?",
+      "respuesta":"Cuando regularizás una materia, podés dar un examen final como alumno regular todas las veces que necesites hasta que apruebes o se te venza la regularidad. Suelen ser 2 años de regularidad en los que hay un total de 10 turnos de examen (de los cuales 3 por año tienen dos llamados, pero solo podés inscribirte en uno)."
+    },
+    {
+      "pregunta":"¿Cómo es dar libre una materia?",
+      "respuesta":"Para dar libre una materia, o sea, rendir un final sin necesidad de cursarla, hay 3 turnos por año (febrero, julio y diciembre) en los que podés hacerlo, pero suele ser más complicado. Antes de inscribirte al llamado, tenés que contactarte con quien dé la materia. Hay ciertas materias que requieren un trabajo práctico previo al final, otras que toman un final más complejo y otras en las que es el mismo que para los alumnos regulares. Esto es específico de la materia y suelen tener cambios en cómo se calcula la nota."
+    },
+    {
+      "pregunta":"¿Puedo cursar más de una carrera a la vez?",
+      "respuesta":"Sí. Aproximadamente un mes previo a las inscripciones al 1.º y 2.º semestre se habilita el formulario de 'cambio/simultaneidad de carrera' en UngsActiva > Moodle > Links. Es recomendable en carreras que tienen una tecnicatura como título intermedio que te inscribas a ambas."
+    },
+    {
+      "pregunta":"Estoy inscripto en dos carreras que comparten materias, ¿tengo que cursarlas 2 veces?",
+      "respuesta":"No. La gran mayoría de materias que se repiten se computará automáticamente la equivalencia a la otra carrera. Hay materias que son las mismas, pero tienen distintos nombres, como en Tec. Informática y Lic. en Sistemas, donde en una se llama 'Ingeniería de software' y en la otra 'Ingeniería de software I'. En estos casos deberás llenar el formulario de equivalencia interna en UngsActiva > Moodle > Links. También puede haber casos como 'Cálculo I' de las ingenierías y 'Cálculo para computación' de Sistemas que, por más que comparten gran parte del contenido, hay ciertas diferencias, por lo que puede que no te den la equivalencia (en casos así podría ser recomendable darla libre)."
+    },
+    {
+      "pregunta":"¿Dónde puedo ver mi horario de clases?",
+      "respuesta":"Si no estás inscripto, utilizá el buscador de comisiones de arriba buscando la materia por nombre para ver a cuál podés inscribirte, y si ya lo estás, desde el Siu-Guaraní podés ir a Reportes > Mis inscripciones."
+    }
   ]
 }

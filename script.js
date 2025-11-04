@@ -183,10 +183,41 @@ function renderComisiones(materias) {
 function renderFAQ(data) {
 	const div = document.getElementById("faq-content");
 	div.innerHTML = "";
+
 	data.preguntas.forEach((q) => {
 		const card = document.createElement("div");
-		card.className = "card";
-		card.innerHTML = `<b>${q.pregunta}</b><br>${q.respuesta}`;
+		card.className = "card faq";
+
+		card.innerHTML = `
+      <div class="pregunta-container">
+        <p class="pregunta"><b>${q.pregunta}</b></p>
+        <svg class="arrow" style="transform:rotate(180deg)" viewBox="0 0 40 40" fill="none"
+          xmlns="http://www.w3.org/2000/svg" stroke="white"
+          stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M5 28L20 13L35 28" />
+        </svg>
+      </div>
+			<div class="respuesta-container">
+      <p class="respuesta">${q.respuesta}</p>
+			</div>
+    `;
+
+		const respCont = card.querySelector(".respuesta-container");
+		respCont.style.maxHeight = "0";
+		respCont.style.overflow = "hidden";
+
+		card.addEventListener("click", () => {
+			const arrow = card.querySelector(".arrow");
+			const expanded = card.classList.toggle("open");
+			if (expanded) {
+				respCont.style.maxHeight = respCont.scrollHeight + "px";
+				arrow.style.transform = "rotate(0deg)";
+			} else {
+				respCont.style.maxHeight = "0";
+				arrow.style.transform = "rotate(180deg)";
+			}
+		});
+
 		div.appendChild(card);
 	});
 }
